@@ -39,13 +39,14 @@ public class GetRequests extends TestConfig {
     @Test
     public void verifyResponseUserDataSchema() {
         try {
-            given()
+            UserData userData = given()
                     .when()
                     .get(Resources.getUserEntryEndPointUri())
                     .then()
                     .assertThat()
                     .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/schemaFileTesting")).and()
-                    .statusCode(HttpStatus.SC_OK);
+                    .statusCode(HttpStatus.SC_OK).extract().body().as(UserData.class);
+            Assert.assertEquals(userData.getData().getId(), 2);
         } catch (Exception e) {
             e.printStackTrace();
             Assert.fail("Exception thrown Test case failed :" + e.getMessage(), e);
