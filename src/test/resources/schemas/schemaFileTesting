@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data":
+    {
+      "type": "object",
+      "required": [
+        "id",
+        "email",
+        "first_name",
+        "last_name",
+        "avatar"
+      ],
+      "properties":
+      {
+        "id": {
+          "description": "id employees",
+          "type": "integer"
+        },
+        "email": {
+          "description": "email employees",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "name employees",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "last name employees",
+          "type": "string"
+        },
+        "avatar": {
+          "description": "face employees",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
