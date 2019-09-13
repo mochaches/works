@@ -15,7 +15,7 @@ public class TestConfig {
     @BeforeMethod
     public void preCondition() throws IOException {
 //        userDetailsPayload = new FileReader().readFile("request/userDetails.json");
-//        userPersonalDetailsPayload = new FileReader().readFile("request/userPersonalDetails.json");
+        userPersonalDetailsPayload = new FileReader().readFile("request/userPersonalDetails.json");
         FileInputStream fis = new FileInputStream("./src/main/resources/config.properties");
         prop = new Properties();
         prop.load(fis);

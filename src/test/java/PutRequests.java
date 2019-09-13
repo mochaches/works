@@ -14,10 +14,10 @@ public class PutRequests extends TestConfig {
             given()
                         .header("Content-Type", "application/json")
                         .body(userPersonalDetailsPayload)
-                    .when()
-                        .put(Resources.getUserEntryEndPointUri())
+                    .when().log().all()
+                        .put(Resources.getUser2EndPointUri())
                     .then()
-                        .statusCode(HttpStatus.SC_OK);
+                        .statusCode(HttpStatus.SC_OK).log().all();
         } catch (Exception e){
             e.printStackTrace();
             Assert.fail("Exception thrown Test case failed (!!!) :" + e.getMessage());

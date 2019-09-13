@@ -41,7 +41,7 @@ public class GetRequests extends TestConfig {
         try {
             UserData userData = given()
                     .when()
-                    .get(Resources.getUserEntryEndPointUri())
+                    .get(Resources.getUser2EndPointUri())
                     .then()
                     .assertThat()
                     .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/schemaFileTesting")).and()

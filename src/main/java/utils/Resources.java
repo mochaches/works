@@ -11,7 +11,7 @@ public class Resources {
         String endPoint = "/api/register";
         return endPoint;
     }
-    public static String getUserEntryEndPointUri(){
+    public static String getUser2EndPointUri(){
         String endPoint = "/api/users/2";
     return endPoint;
     }
